@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --foreground: 0 0 0;
+  --background: 255 255 255;
+  --card: 255 255 255;
+  --card-foreground: 0 0 0;
+  --popover: 255 255 255;
+  --popover-foreground: 0 0 0;
+  --primary: 0 0 0;
+  --primary-foreground: 255 255 255;
+  --secondary: 245 245 245;
+  --secondary-foreground: 0 0 0;
+  --muted: 245 245 245;
+  --muted-foreground: 115 115 115;
+  --accent: 245 245 245;
+  --accent-foreground: 15 15 15;
+  --destructive: 200 0 0;
+  --destructive-foreground: 255 255 255;
+  --border: 235 235 235;
+  --input: 235 235 235;
+  --ring: 0 0 0;
+  --radius: 0.5rem;
+
+  /* Theme transition */
+  --theme-transition: all 0.3s ease;
+
+  /* Accessibility modes */
+  --colorblind-primary: 0 0 0; /* Default black */
+  --colorblind-secondary: 0 0 180; /* Blue */
+  --colorblind-accent: 180 0 0; /* Red */
+  --high-contrast-foreground: 0 0 0; /* Pure black */
+  --high-contrast-background: 255 255 255; /* Pure white */
+  --high-contrast-border: 0 0 0; /* Pure black */
+}
+
+/* Dark mode colors */
+html.dark-mode {
+  --foreground: 230 230 230;  /* Blanc légèrement atténué pour le texte principal */
+  --background: 18 18 18;  /* Noir légèrement atténué pour l'arrière-plan */
+  --card: 30 30 30;  /* Gris foncé pour les cartes */
+  --card-foreground: 230 230 230;  /* Blanc légèrement atténué pour le texte des cartes */
+  --popover: 35 35 35;  /* Gris foncé pour les popups */
+  --popover-foreground: 230 230 230;  /* Blanc légèrement atténué pour le texte des popups */
+  --primary: 200 200 200;  /* Gris clair pour les éléments primaires */
+  --primary-foreground: 25 25 25;  /* Noir légèrement atténué pour le texte sur fond clair */
+  --secondary: 45 45 45;  /* Gris foncé pour les éléments secondaires */
+  --secondary-foreground: 220 220 220;  /* Blanc légèrement atténué pour le texte secondaire */
+  --muted: 40 40 40;  /* Gris foncé pour les éléments discrets */
+  --muted-foreground: 180 180 180;  /* Gris clair pour le texte discret */
+  --accent: 70 90 110;  /* Bleu-gris foncé pour l'accent (remplace le jaune) */
+  --accent-foreground: 230 230 230;  /* Blanc légèrement atténué pour le texte d'accent */
+  --destructive: 220 60 60;  /* Rouge pour les éléments destructifs */
+  --destructive-foreground: 255 255 255;  /* Blanc pour le texte destructif */
+  --border: 60 60 60;  /* Gris foncé pour les bordures */
+  --input: 40 40 40;  /* Gris foncé pour les champs de saisie */
+  --ring: 100 120 140;  /* Bleu-gris pour l'anneau de focus (remplace le jaune) */
+}
+
+/* Pour les icônes d'accessibilité et les boutons de thème */
+.accessibility-button,
+.theme-toggle-button {
+  background-color: rgb(0 0 0);
+  color: rgb(255 255 255);
+  transition: all 0.3s ease;
+}
+
+/* Ajustement des boutons en mode sombre */
+html.dark-mode .accessibility-button,
+html.dark-mode .theme-toggle-button {
+  background-color: rgb(50 50 50);
+  color: rgb(230 230 230);
+  border-color: rgb(70 70 70);
+}
+
+/* Mode sombre pour le logo */
+html.dark-mode .logo-container svg path,
+html.dark-mode .logo-container svg rect,
+html.dark-mode .logo-container svg circle {
+  fill: rgb(255 255 255);
+}
+
+/* Pour améliorer la visibilité des textes */
+html.dark-mode p,
+html.dark-mode h1, 
+html.dark-mode h2, 
+html.dark-mode h3, 
+html.dark-mode h4, 
+html.dark-mode h5, 
+html.dark-mode h6,
+html.dark-mode a,
+html.dark-mode button,
+html.dark-mode label {
+  color: rgb(var(--foreground));
+}
+
+/* Amélioration du contraste pour les textes */
+html.dark-mode .text-gray-700 {
+  color: rgb(210 210 210);
+}
+
+html.dark-mode .text-muted-foreground {
+  color: rgb(200 200 200);
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease forwards;
+}
+
+.slide-down {
+  animation: slideDown 0.6s ease forwards;
+}
+
+.blur-in {
+  animation: blurIn 0.7s ease forwards;
+}
+
+.blur-out {
+  animation: blurOut 0.7s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes blurIn {
+  from { filter: blur(10px); opacity: 0; }
+  to { filter: blur(0); opacity: 1; }
+}
+
+@keyframes blurOut {
+  from { filter: blur(0); opacity: 1; }
+  to { filter: blur(10px); opacity: 0; }
+}
+
+/* Accessibility classes */
+html.colorblind-mode {
+  --primary: var(--colorblind-primary);
+  --accent: var(--colorblind-accent);
+  --secondary: var(--colorblind-secondary);
+  filter: saturate(120%);
+}
+
+html.high-contrast {
+  --foreground: var(--high-contrast-foreground);
+  --background: var(--high-contrast-background);
+  --border: var(--high-contrast-border);
+  --muted-foreground: var(--high-contrast-foreground);
+  --card-foreground: var(--high-contrast-foreground);
+  --popover-foreground: var(--high-contrast-foreground);
+  filter: contrast(150%);
+}
+
+html.dyslexic-font {
+  --font-sans: "OpenDyslexic", "Comic Sans MS", var(--font-sans);
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+html.dyslexic-font p, 
+html.dyslexic-font h1, 
+html.dyslexic-font h2, 
+html.dyslexic-font h3, 
+html.dyslexic-font h4, 
+html.dyslexic-font h5, 
+html.dyslexic-font h6,
+html.dyslexic-font span,
+html.dyslexic-font div,
+html.dyslexic-font button,
+html.dyslexic-font a {
+  font-family: var(--font-sans) !important;
+}
+
+/* Base styles */
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+@layer base {
+  :root {
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @font-face {
+    font-family: 'OpenDyslexic';
+    src: url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/open-dyslexic-regular.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+  }
+}
+
+/* Animation performance optimization */
+@media (prefers-reduced-motion: reduce), (update: slow) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom classes for components */
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+
+  .btn-outline {
+    @apply border border-input hover:bg-accent hover:text-accent-foreground;
+  }
+
+  .card {
+    @apply rounded-lg border border-border bg-card text-card-foreground shadow-sm;
+  }
+
+  .section-heading {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl mb-6;
+  }
+
+  .section-subheading {
+    @apply text-lg text-muted-foreground mb-8 max-w-3xl;
+  }
+}
+
+/* Utilities for the app */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

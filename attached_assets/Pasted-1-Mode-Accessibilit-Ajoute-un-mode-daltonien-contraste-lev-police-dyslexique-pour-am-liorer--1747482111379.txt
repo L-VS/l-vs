@@ -1,0 +1,57 @@
+1.	Mode Accessibilité
+Ajoute un mode daltonien / contraste élevé / police dyslexique pour améliorer l’accessibilité.
+	2.	Animations intelligentes
+Les animations doivent s’adapter aux performances du device (GPU faible = animations simplifiées).
+	3.	SEO optimisé
+Le site doit être optimisé pour le référencement naturel (balises meta, sitemap auto, Open Graph pour les réseaux).
+	4.	Lazy Loading des images
+Les images se chargent uniquement quand elles apparaissent à l’écran pour booster la vitesse.
+	5.	Système de favoris pour les visiteurs
+Les visiteurs peuvent liker un projet et retrouver leurs favoris via le localStorage.
+	6.	Mode “Timeline” pour mes projets
+Ajoute une frise chronologique animée pour voir l’évolution de mes projets dans le temps.
+	7.	Statistiques de visites (admin)
+Dashboard simple pour que je voie les visites, les projets populaires, les langues des visiteurs, etc.
+	8.	PWA (Progressive Web App)
+Le site peut s’installer sur mobile et fonctionner en mode offline pour l’essentiel.
+	9.	Mode “Work in Progress” pour projets futurs
+Affiche des projets à venir avec un badge “En cours” ou “Bientôt dispo” en mode teaser animé.
+	10.	Partage social intelligent
+Boutons de partage pour chaque projet (Twitter/X, LinkedIn, Instagram, etc.) avec image preview.
+	11.	Mode sombre automatique
+Le mode sombre se synchronise avec le thème du système de l’utilisateur (dark/light mode auto).
+	12.	Section Témoignages / Avis
+Espace où des partenaires ou clients peuvent laisser un retour visible sur le site.
+	13.	Système de notifications (admin)
+Quand un commentaire est posté ou un sondage rempli, je reçois une notif mail / dashboard.
+	14.	Recherche intelligente sur mes projets
+Un champ de recherche qui filtre mes projets en live selon mots-clés, catégories ou années.
+	15.	Effets de parallaxe ou 3D légers
+Donne un effet de profondeur sans alourdir la navigation.
+
+⸻
+
+📝 Version complète du prompt (ton texte + ajouts optimisés) :
+
+Crée un site avec une arborescence simple, un bouton jour/nuit, un beau loader animé. La page principale sera en noir et blanc, avec tous mes projets, futurs projets inclus, dans un style arrondi, épuré, moderne, animé et performant. Mon nom de dev est L-VS.
+
+Le site détecte automatiquement la langue de l’utilisateur et traduit le contenu. Les projets sont classés dans des catégories. J’ajouterai mon logo, mes réseaux sociaux et mon adresse mail.
+
+Intègre un espace de sondage et commentaires, un système de connexion admin avec un CMS simple pour gérer mes projets et contenus.
+
+Rajoute :
+	•	Un mode accessibilité (daltonien, dyslexique, contraste)
+	•	Animations adaptatives selon performances
+	•	Optimisation SEO (meta, sitemap, Open Graph)
+	•	Lazy loading des images
+	•	Système de favoris visiteurs
+	•	Timeline animée pour les projets
+	•	Dashboard admin avec statistiques de visites
+	•	Mode PWA pour installation mobile et mode offline
+	•	Badges “Work in Progress” pour les projets à venir
+	•	Partage social intelligent pour les projets
+	•	Mode sombre auto selon thème système
+	•	Section Témoignages / Avis
+	•	Notifications admin pour commentaires & sondages
+	•	Recherche intelligente sur mes projets
+	•	Effets parallaxe / 3D légers pour profondeur visuelle
